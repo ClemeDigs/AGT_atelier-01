@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --main-color-bg: rgb(31, 31, 31);
+    --main-color: rgb(211, 211, 211);
+    --secondary-color: rgb(159, 210, 152);
+    font-family: "Source Code Pro", monospace;
+    --box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+body {
+    background-color: var(--main-color-bg);
+    color: var(--main-color);
+    margin: 0;
+} 
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+
+    > nav {
+        width: 100%;
+
+        > ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+
+            > li {
+
+                > a {
+                    color: var(--secondary-color);
+                    text-decoration: none;
+                    transition: font-weight 0.3s ease-in-out;
+                }
+
+                > a:hover, a:focus {
+                    font-weight: 700;
+                }
+
+            }
+        }
+
+    }
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    background-image: url(./assets/img/header.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    padding: 30px;
+}
+
+section {
+    width: 80vw;
+    background-color: var(--main-color-bg);
+    padding: 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 30px;
+    box-shadow: var(--box-shadow);
+}
+
+img {
+    max-width: 600px;
+}
+
+#ex-trans {
+    color: var(--main-color);
+    transition: color 0.5s ease-in-out;
+}
+
+#ex-trans:hover, #ex-trans:focus {
+    color: #8dd4dc;
+}
+
+@keyframes blink {
+    0% { opacity: 1; } /* État initial - complètement visible */
+    50% { opacity: 0; } /* État intermédiaire - complètement invisible */
+    100% { opacity: 1; } /* État final - complètement visible */
+}
+
+.blink {
+    animation: blink 1s infinite; /* Utilisation de l'animation 'blink' pendant 1 seconde en boucle infinie */
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+
+
